@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace AgenciaDeViajes
 {
-    public partial class Form1 : Form
+    public partial class rbtnMediaPension : Form
     {
-        public Form1()
+        public rbtnMediaPension()
         {
             InitializeComponent();
+        }
+
+        private void frmFormularioPrincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
