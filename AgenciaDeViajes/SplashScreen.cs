@@ -20,7 +20,7 @@ namespace AgenciaDeViajes
         private void tmrTimer_Tick(object sender, EventArgs e)
         {
             tmrTimer.Stop();
-            rbtnMediaPension frmPrincipal = new rbtnMediaPension();
+            frmFormularioPrincipal frmPrincipal = new frmFormularioPrincipal();
             frmPrincipal.Show();
             this.Hide();
         }
