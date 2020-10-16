@@ -44,9 +44,9 @@
             // pcbImagen
             // 
             this.pcbImagen.Image = ((System.Drawing.Image)(resources.GetObject("pcbImagen.Image")));
-            this.pcbImagen.Location = new System.Drawing.Point(266, 12);
+            this.pcbImagen.Location = new System.Drawing.Point(287, 131);
             this.pcbImagen.Name = "pcbImagen";
-            this.pcbImagen.Size = new System.Drawing.Size(272, 346);
+            this.pcbImagen.Size = new System.Drawing.Size(234, 140);
             this.pcbImagen.TabIndex = 0;
             this.pcbImagen.TabStop = false;
             // 

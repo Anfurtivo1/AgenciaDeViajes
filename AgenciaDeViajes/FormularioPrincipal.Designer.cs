@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFormularioPrincipal));
-            this.lstiListaimagenesDestino = new System.Windows.Forms.ImageList(this.components);
             this.chlbActividadesExtras = new System.Windows.Forms.CheckedListBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.mncCalendarioFecha = new System.Windows.Forms.MonthCalendar();
@@ -58,20 +57,23 @@
             this.btnPrecios = new System.Windows.Forms.ToolStripButton();
             this.btnSalir = new System.Windows.Forms.ToolStripButton();
             this.label7 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lbDestinos = new System.Windows.Forms.ListBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pbCiudad = new System.Windows.Forms.PictureBox();
+            this.pbMontana = new System.Windows.Forms.PictureBox();
+            this.pbPlaya = new System.Windows.Forms.PictureBox();
+            this.pbTour = new System.Windows.Forms.PictureBox();
+            this.txbCantidadTotal = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numudPersonas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numudEstrellas)).BeginInit();
             this.strBarraAbajo.SuspendLayout();
             this.tsBarraArriba.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCiudad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMontana)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPlaya)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTour)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lstiListaimagenesDestino
-            // 
-            this.lstiListaimagenesDestino.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("lstiListaimagenesDestino.ImageStream")));
-            this.lstiListaimagenesDestino.TransparentColor = System.Drawing.Color.Transparent;
-            this.lstiListaimagenesDestino.Images.SetKeyName(0, "ImagenCiudad.jpg");
-            this.lstiListaimagenesDestino.Images.SetKeyName(1, "ImagenMontaña.jpg");
-            this.lstiListaimagenesDestino.Images.SetKeyName(2, "ImagenPlaya.jpg");
-            this.lstiListaimagenesDestino.Images.SetKeyName(3, "ImagenTour.jpg");
             // 
             // chlbActividadesExtras
             // 
@@ -82,7 +84,7 @@
             "Lavandería",
             "NaturAventura",
             "Spa"});
-            this.chlbActividadesExtras.Location = new System.Drawing.Point(770, 57);
+            this.chlbActividadesExtras.Location = new System.Drawing.Point(691, 58);
             this.chlbActividadesExtras.Name = "chlbActividadesExtras";
             this.chlbActividadesExtras.Size = new System.Drawing.Size(120, 79);
             this.chlbActividadesExtras.TabIndex = 0;
@@ -91,7 +93,7 @@
             // 
             this.listView1.BackColor = System.Drawing.Color.DarkGreen;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(130, 177);
+            this.listView1.Location = new System.Drawing.Point(50, 213);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(154, 144);
             this.listView1.TabIndex = 1;
@@ -99,14 +101,14 @@
             // 
             // mncCalendarioFecha
             // 
-            this.mncCalendarioFecha.Location = new System.Drawing.Point(454, 155);
+            this.mncCalendarioFecha.Location = new System.Drawing.Point(375, 156);
             this.mncCalendarioFecha.Name = "mncCalendarioFecha";
             this.mncCalendarioFecha.TabIndex = 2;
             // 
             // rbtnSoloDormir
             // 
             this.rbtnSoloDormir.AutoSize = true;
-            this.rbtnSoloDormir.Location = new System.Drawing.Point(154, 194);
+            this.rbtnSoloDormir.Location = new System.Drawing.Point(74, 230);
             this.rbtnSoloDormir.Name = "rbtnSoloDormir";
             this.rbtnSoloDormir.Size = new System.Drawing.Size(79, 17);
             this.rbtnSoloDormir.TabIndex = 3;
@@ -117,7 +119,7 @@
             // rbtnPensionCompleta
             // 
             this.rbtnPensionCompleta.AutoSize = true;
-            this.rbtnPensionCompleta.Location = new System.Drawing.Point(154, 273);
+            this.rbtnPensionCompleta.Location = new System.Drawing.Point(74, 309);
             this.rbtnPensionCompleta.Name = "rbtnPensionCompleta";
             this.rbtnPensionCompleta.Size = new System.Drawing.Size(109, 17);
             this.rbtnPensionCompleta.TabIndex = 5;
@@ -127,7 +129,7 @@
             // 
             // btnValidar
             // 
-            this.btnValidar.Location = new System.Drawing.Point(651, 453);
+            this.btnValidar.Location = new System.Drawing.Point(572, 454);
             this.btnValidar.Name = "btnValidar";
             this.btnValidar.Size = new System.Drawing.Size(100, 23);
             this.btnValidar.TabIndex = 7;
@@ -158,7 +160,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Aquamarine;
-            this.label3.Location = new System.Drawing.Point(451, 133);
+            this.label3.Location = new System.Drawing.Point(372, 134);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 10;
@@ -168,7 +170,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Aquamarine;
-            this.label4.Location = new System.Drawing.Point(801, 177);
+            this.label4.Location = new System.Drawing.Point(722, 178);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 13);
             this.label4.TabIndex = 11;
@@ -178,7 +180,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Aquamarine;
-            this.label5.Location = new System.Drawing.Point(801, 255);
+            this.label5.Location = new System.Drawing.Point(722, 256);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 13);
             this.label5.TabIndex = 12;
@@ -187,7 +189,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(151, 161);
+            this.label6.Location = new System.Drawing.Point(71, 197);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(87, 13);
             this.label6.TabIndex = 13;
@@ -195,7 +197,7 @@
             // 
             // numudPersonas
             // 
-            this.numudPersonas.Location = new System.Drawing.Point(761, 177);
+            this.numudPersonas.Location = new System.Drawing.Point(682, 178);
             this.numudPersonas.Minimum = new decimal(new int[] {
             1,
             0,
@@ -213,7 +215,7 @@
             // 
             // numudEstrellas
             // 
-            this.numudEstrellas.Location = new System.Drawing.Point(759, 253);
+            this.numudEstrellas.Location = new System.Drawing.Point(680, 254);
             this.numudEstrellas.Maximum = new decimal(new int[] {
             5,
             0,
@@ -235,16 +237,17 @@
             // 
             // txbCalculos
             // 
-            this.txbCalculos.Location = new System.Drawing.Point(396, 329);
+            this.txbCalculos.Location = new System.Drawing.Point(317, 330);
             this.txbCalculos.Multiline = true;
             this.txbCalculos.Name = "txbCalculos";
             this.txbCalculos.ReadOnly = true;
+            this.txbCalculos.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txbCalculos.Size = new System.Drawing.Size(355, 118);
             this.txbCalculos.TabIndex = 15;
             // 
             // btnCalcular
             // 
-            this.btnCalcular.Location = new System.Drawing.Point(117, 346);
+            this.btnCalcular.Location = new System.Drawing.Point(37, 382);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(187, 23);
             this.btnCalcular.TabIndex = 6;
@@ -255,7 +258,7 @@
             // rbtnMediaPension
             // 
             this.rbtnMediaPension.AutoSize = true;
-            this.rbtnMediaPension.Location = new System.Drawing.Point(154, 235);
+            this.rbtnMediaPension.Location = new System.Drawing.Point(74, 271);
             this.rbtnMediaPension.Name = "rbtnMediaPension";
             this.rbtnMediaPension.Size = new System.Drawing.Size(95, 17);
             this.rbtnMediaPension.TabIndex = 4;
@@ -273,7 +276,7 @@
             this.stlFechaHora});
             this.strBarraAbajo.Location = new System.Drawing.Point(0, 480);
             this.strBarraAbajo.Name = "strBarraAbajo";
-            this.strBarraAbajo.Size = new System.Drawing.Size(931, 22);
+            this.strBarraAbajo.Size = new System.Drawing.Size(829, 22);
             this.strBarraAbajo.TabIndex = 16;
             this.strBarraAbajo.Text = "strBarraAbajo";
             // 
@@ -302,8 +305,7 @@
             // 
             this.stlFechaHora.BackColor = System.Drawing.Color.FloralWhite;
             this.stlFechaHora.Name = "stlFechaHora";
-            this.stlFechaHora.Size = new System.Drawing.Size(70, 17);
-            this.stlFechaHora.Text = "FechaHora";
+            this.stlFechaHora.Size = new System.Drawing.Size(0, 17);
             // 
             // tsBarraArriba
             // 
@@ -313,7 +315,7 @@
             this.btnSalir});
             this.tsBarraArriba.Location = new System.Drawing.Point(0, 0);
             this.tsBarraArriba.Name = "tsBarraArriba";
-            this.tsBarraArriba.Size = new System.Drawing.Size(931, 25);
+            this.tsBarraArriba.Size = new System.Drawing.Size(829, 25);
             this.tsBarraArriba.TabIndex = 17;
             this.tsBarraArriba.Text = "toolStrip1";
             // 
@@ -348,18 +350,97 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Aquamarine;
-            this.label7.Location = new System.Drawing.Point(767, 41);
+            this.label7.Location = new System.Drawing.Point(688, 42);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(94, 13);
             this.label7.TabIndex = 18;
             this.label7.Text = "Actividades Extras";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lbDestinos
+            // 
+            this.lbDestinos.FormattingEnabled = true;
+            this.lbDestinos.Items.AddRange(new object[] {
+            "Ciudad",
+            "Montaña",
+            "Playa",
+            "Tour"});
+            this.lbDestinos.Location = new System.Drawing.Point(356, 58);
+            this.lbDestinos.Name = "lbDestinos";
+            this.lbDestinos.Size = new System.Drawing.Size(56, 56);
+            this.lbDestinos.TabIndex = 20;
+            this.lbDestinos.SelectedIndexChanged += new System.EventHandler(this.lbDestinos_SelectedIndexChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Aquamarine;
+            this.label8.Location = new System.Drawing.Point(358, 42);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(85, 13);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Elige un destino:";
+            // 
+            // pbCiudad
+            // 
+            this.pbCiudad.Image = ((System.Drawing.Image)(resources.GetObject("pbCiudad.Image")));
+            this.pbCiudad.Location = new System.Drawing.Point(50, 42);
+            this.pbCiudad.Name = "pbCiudad";
+            this.pbCiudad.Size = new System.Drawing.Size(252, 140);
+            this.pbCiudad.TabIndex = 22;
+            this.pbCiudad.TabStop = false;
+            // 
+            // pbMontana
+            // 
+            this.pbMontana.Image = ((System.Drawing.Image)(resources.GetObject("pbMontana.Image")));
+            this.pbMontana.Location = new System.Drawing.Point(50, 42);
+            this.pbMontana.Name = "pbMontana";
+            this.pbMontana.Size = new System.Drawing.Size(252, 120);
+            this.pbMontana.TabIndex = 23;
+            this.pbMontana.TabStop = false;
+            // 
+            // pbPlaya
+            // 
+            this.pbPlaya.Image = ((System.Drawing.Image)(resources.GetObject("pbPlaya.Image")));
+            this.pbPlaya.Location = new System.Drawing.Point(50, 42);
+            this.pbPlaya.Name = "pbPlaya";
+            this.pbPlaya.Size = new System.Drawing.Size(252, 140);
+            this.pbPlaya.TabIndex = 24;
+            this.pbPlaya.TabStop = false;
+            // 
+            // pbTour
+            // 
+            this.pbTour.Image = ((System.Drawing.Image)(resources.GetObject("pbTour.Image")));
+            this.pbTour.Location = new System.Drawing.Point(50, 36);
+            this.pbTour.Name = "pbTour";
+            this.pbTour.Size = new System.Drawing.Size(252, 146);
+            this.pbTour.TabIndex = 25;
+            this.pbTour.TabStop = false;
+            // 
+            // txbCantidadTotal
+            // 
+            this.txbCantidadTotal.Location = new System.Drawing.Point(317, 454);
+            this.txbCantidadTotal.Name = "txbCantidadTotal";
+            this.txbCantidadTotal.Size = new System.Drawing.Size(100, 20);
+            this.txbCantidadTotal.TabIndex = 26;
             // 
             // frmFormularioPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGreen;
-            this.ClientSize = new System.Drawing.Size(931, 502);
+            this.ClientSize = new System.Drawing.Size(829, 502);
+            this.Controls.Add(this.txbCantidadTotal);
+            this.Controls.Add(this.pbTour);
+            this.Controls.Add(this.pbPlaya);
+            this.Controls.Add(this.pbMontana);
+            this.Controls.Add(this.pbCiudad);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lbDestinos);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.tsBarraArriba);
             this.Controls.Add(this.strBarraAbajo);
@@ -384,7 +465,6 @@
             this.Name = "frmFormularioPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agencia de Viajes IFP VdG";
-            this.Activated += new System.EventHandler(this.frmFormularioPrincipal_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmFormularioPrincipal_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.numudPersonas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numudEstrellas)).EndInit();
@@ -392,14 +472,16 @@
             this.strBarraAbajo.PerformLayout();
             this.tsBarraArriba.ResumeLayout(false);
             this.tsBarraArriba.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCiudad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMontana)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPlaya)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTour)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ImageList lstiListaimagenesDestino;
         private System.Windows.Forms.CheckedListBox chlbActividadesExtras;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.MonthCalendar mncCalendarioFecha;
@@ -427,6 +509,14 @@
         private System.Windows.Forms.ToolStripButton btnSalir;
         private System.Windows.Forms.ToolStripProgressBar tsprbBarraProgreso;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ListBox lbDestinos;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox pbCiudad;
+        private System.Windows.Forms.PictureBox pbMontana;
+        private System.Windows.Forms.PictureBox pbPlaya;
+        private System.Windows.Forms.PictureBox pbTour;
+        private System.Windows.Forms.TextBox txbCantidadTotal;
     }
 }
 
