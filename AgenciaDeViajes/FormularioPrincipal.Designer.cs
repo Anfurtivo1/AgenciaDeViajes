@@ -49,14 +49,14 @@
             this.btnCalcular = new System.Windows.Forms.Button();
             this.rbtnMediaPension = new System.Windows.Forms.RadioButton();
             this.strBarraAbajo = new System.Windows.Forms.StatusStrip();
-            this.stlFechaHora = new System.Windows.Forms.ToolStripStatusLabel();
-            this.stlCorreo = new System.Windows.Forms.ToolStripStatusLabel();
             this.stlImagen = new System.Windows.Forms.ToolStripStatusLabel();
+            this.stlCorreo = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tsprbBarraProgreso = new System.Windows.Forms.ToolStripProgressBar();
+            this.stlFechaHora = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsBarraArriba = new System.Windows.Forms.ToolStrip();
             this.btnAcuerdoEmpresa = new System.Windows.Forms.ToolStripButton();
             this.btnPrecios = new System.Windows.Forms.ToolStripButton();
             this.btnSalir = new System.Windows.Forms.ToolStripButton();
-            this.tsprbBarraProgreso = new System.Windows.Forms.ToolStripProgressBar();
             this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numudPersonas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numudEstrellas)).BeginInit();
@@ -277,12 +277,12 @@
             this.strBarraAbajo.TabIndex = 16;
             this.strBarraAbajo.Text = "strBarraAbajo";
             // 
-            // stlFechaHora
+            // stlImagen
             // 
-            this.stlFechaHora.BackColor = System.Drawing.Color.FloralWhite;
-            this.stlFechaHora.Name = "stlFechaHora";
-            this.stlFechaHora.Size = new System.Drawing.Size(70, 17);
-            this.stlFechaHora.Text = "FechaHora";
+            this.stlImagen.BackColor = System.Drawing.Color.FloralWhite;
+            this.stlImagen.Image = ((System.Drawing.Image)(resources.GetObject("stlImagen.Image")));
+            this.stlImagen.Name = "stlImagen";
+            this.stlImagen.Size = new System.Drawing.Size(16, 17);
             // 
             // stlCorreo
             // 
@@ -293,12 +293,17 @@
             this.stlCorreo.Size = new System.Drawing.Size(179, 17);
             this.stlCorreo.Text = "viajeconnosotros@gmail.com";
             // 
-            // stlImagen
+            // tsprbBarraProgreso
             // 
-            this.stlImagen.BackColor = System.Drawing.Color.FloralWhite;
-            this.stlImagen.Image = ((System.Drawing.Image)(resources.GetObject("stlImagen.Image")));
-            this.stlImagen.Name = "stlImagen";
-            this.stlImagen.Size = new System.Drawing.Size(16, 17);
+            this.tsprbBarraProgreso.Name = "tsprbBarraProgreso";
+            this.tsprbBarraProgreso.Size = new System.Drawing.Size(200, 16);
+            // 
+            // stlFechaHora
+            // 
+            this.stlFechaHora.BackColor = System.Drawing.Color.FloralWhite;
+            this.stlFechaHora.Name = "stlFechaHora";
+            this.stlFechaHora.Size = new System.Drawing.Size(70, 17);
+            this.stlFechaHora.Text = "FechaHora";
             // 
             // tsBarraArriba
             // 
@@ -338,11 +343,6 @@
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(23, 22);
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // tsprbBarraProgreso
-            // 
-            this.tsprbBarraProgreso.Name = "tsprbBarraProgreso";
-            this.tsprbBarraProgreso.Size = new System.Drawing.Size(200, 16);
             // 
             // label7
             // 
@@ -385,6 +385,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agencia de Viajes IFP VdG";
             this.Activated += new System.EventHandler(this.frmFormularioPrincipal_Activated);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmFormularioPrincipal_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.numudPersonas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numudEstrellas)).EndInit();
             this.strBarraAbajo.ResumeLayout(false);
